@@ -42,9 +42,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg flex items-center justify-center">
-                <span className="text-[#2C323C] font-bold text-lg">B</span>
-              </div>
+              <img 
+                src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                alt="Bytecode IT Solutions"
+                className="w-10 h-10 object-contain"
+              />
               <div>
                 <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
                 <div className="text-xs text-gray-600">IT Solutions PVT LTD</div>
@@ -58,14 +60,14 @@ const Index = () => {
               <button onClick={() => navigate('/services')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Services</button>
               <button onClick={() => navigate('/portfolio')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Portfolio</button>
               <button onClick={() => navigate('/contact')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Contact</button>
-              <Button className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 font-semibold">
+              <Button className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] font-semibold">
                 Get Free Quote
               </Button>
             </div>
 
             {/* Mobile menu button */}
             <button 
-              className="md:hidden"
+              className="md:hidden text-[#2C323C]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -98,7 +100,7 @@ const Index = () => {
                 </Badge>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] leading-tight">
                   Transform Your Business with 
-                  <span className="bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 bg-clip-text text-transparent"> Custom Web Solutions</span>
+                  <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Custom Web Solutions</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   From stunning websites to powerful web applications, we deliver cutting-edge solutions that drive growth and exceed expectations. Trusted by 500+ businesses across the USA.
@@ -108,7 +110,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 text-lg px-8 py-6 font-semibold"
+                  className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold"
                   onClick={() => scrollToSection('contact')}
                 >
                   Start Your Project Today
@@ -140,7 +142,7 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-r from-[#2C323C] to-[#2C323C]/90 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-[#2C323C] to-[#1F252D] rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Get Your Free Consultation</h3>
                 <p className="mb-6">Ready to transform your digital presence? Let's discuss your project requirements.</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -165,7 +167,7 @@ const Index = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   />
-                  <Button type="submit" className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 font-semibold">
+                  <Button type="submit" className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] font-semibold">
                     Get Free Quote Now
                   </Button>
                 </form>
@@ -188,7 +190,7 @@ const Index = () => {
       <section id="services" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C323C] mb-4">
               Our Expert Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -237,15 +239,15 @@ const Index = () => {
             ].map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
                 <CardContent className="p-6">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-3 w-fit mb-4 text-white">
+                  <div className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] rounded-lg p-3 w-fit mb-4 text-[#2C323C]">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-[#2C323C] mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-[#BBED50] rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
@@ -261,7 +263,7 @@ const Index = () => {
       <section id="portfolio" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C323C] mb-4">
               Our Success Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -296,13 +298,13 @@ const Index = () => {
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }}></div>
                 <CardContent className="p-6">
-                  <Badge className="bg-blue-100 text-blue-700 mb-3">{project.category}</Badge>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <Badge className="bg-[#BBED50]/20 text-[#2C323C] mb-3">{project.category}</Badge>
+                  <h3 className="text-xl font-bold text-[#2C323C] mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="space-y-2">
                     {project.results.map((result, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-700">
-                        <ArrowUp className="w-4 h-4 text-green-600 mr-2" />
+                        <ArrowUp className="w-4 h-4 text-[#BBED50] mr-2" />
                         {result}
                       </div>
                     ))}
@@ -318,7 +320,7 @@ const Index = () => {
       <section id="testimonials" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C323C] mb-4">
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600">
@@ -359,9 +361,9 @@ const Index = () => {
                   </div>
                   <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
                   <div>
-                    <div className="font-bold text-gray-900">{testimonial.name}</div>
+                    <div className="font-bold text-[#2C323C]">{testimonial.name}</div>
                     <div className="text-sm text-gray-600">{testimonial.title}</div>
-                    <div className="text-sm text-blue-600">{testimonial.location}</div>
+                    <div className="text-sm text-[#BBED50]">{testimonial.location}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -371,7 +373,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#2C323C] to-[#2C323C]/90">
+      <section className="py-16 bg-gradient-to-r from-[#2C323C] to-[#1F252D]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
@@ -382,7 +384,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 text-lg px-8 py-6 font-semibold"
+              className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold"
               onClick={() => scrollToSection('contact')}
             >
               Get Your Free Consultation
@@ -498,9 +500,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg flex items-center justify-center">
-                  <span className="text-[#2C323C] font-bold text-lg">B</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                  alt="Bytecode IT Solutions"
+                  className="w-10 h-10 object-contain"
+                />
                 <div>
                   <span className="font-bold text-lg text-white">Bytecode</span>
                   <div className="text-xs text-gray-400">IT Solutions PVT LTD</div>

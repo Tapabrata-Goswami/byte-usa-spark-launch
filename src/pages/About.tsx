@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,9 +16,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigate('/')}>
-              <div className="w-10 h-10 bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg flex items-center justify-center">
-                <span className="text-[#2C323C] font-bold text-lg">B</span>
-              </div>
+              <img 
+                src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                alt="Bytecode IT Solutions"
+                className="w-10 h-10 object-contain"
+              />
               <div>
                 <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
                 <div className="text-xs text-gray-600">IT Solutions PVT LTD</div>
@@ -33,14 +34,14 @@ const About = () => {
               <button onClick={() => navigate('/services')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Services</button>
               <button onClick={() => navigate('/portfolio')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Portfolio</button>
               <button onClick={() => navigate('/contact')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Contact</button>
-              <Button className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 font-semibold">
+              <Button className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] font-semibold">
                 Get Free Quote
               </Button>
             </div>
 
             {/* Mobile menu button */}
             <button 
-              className="md:hidden"
+              className="md:hidden text-[#2C323C]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -70,7 +71,7 @@ const About = () => {
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] mb-6">
             Empowering Businesses Through 
-            <span className="bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 bg-clip-text text-transparent"> Technology</span>
+            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Technology</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Since our inception, Bytecode IT Solutions has been at the forefront of digital transformation, 
@@ -149,7 +150,7 @@ const About = () => {
             ].map((value, index) => (
               <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
-                  <div className="bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg p-3 w-fit mx-auto mb-4 text-[#2C323C]">
+                  <div className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] rounded-lg p-3 w-fit mx-auto mb-4 text-[#2C323C]">
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-bold text-[#2C323C] mb-3">{value.title}</h3>
@@ -162,7 +163,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-gradient-to-r from-[#2C323C] to-[#2C323C]/90">
+      <section className="py-16 bg-gradient-to-r from-[#2C323C] to-[#1F252D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -224,9 +225,11 @@ const About = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg flex items-center justify-center">
-                  <span className="text-[#2C323C] font-bold text-lg">B</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                  alt="Bytecode IT Solutions"
+                  className="w-10 h-10 object-contain"
+                />
                 <div>
                   <span className="font-bold text-lg text-white">Bytecode</span>
                   <div className="text-xs text-gray-400">IT Solutions PVT LTD</div>
