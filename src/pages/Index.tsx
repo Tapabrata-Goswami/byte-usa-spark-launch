@@ -4,9 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowDown, ArrowUp, ChevronDown, Search, LayoutDashboard, LayoutGrid, LayoutList, Link, Youtube } from "lucide-react";
+import { ArrowDown, ArrowUp, ChevronDown, Search, LayoutDashboard, LayoutGrid, LayoutList, Link, Youtube, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +17,9 @@ const Index = () => {
     phone: "",
     message: ""
   });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,30 +32,58 @@ const Index = () => {
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">B</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg flex items-center justify-center">
+                <span className="text-[#2C323C] font-bold text-lg">B</span>
               </div>
-              <span className="font-bold text-xl text-gray-900">Bytecode IT Solutions</span>
+              <div>
+                <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
+                <div className="text-xs text-gray-600">IT Solutions PVT LTD</div>
+              </div>
             </div>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-blue-600 transition-colors">Services</button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-gray-600 hover:text-blue-600 transition-colors">Portfolio</button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-blue-600 transition-colors">Contact</button>
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              <button onClick={() => navigate('/')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Home</button>
+              <button onClick={() => navigate('/about')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">About</button>
+              <button onClick={() => navigate('/services')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Services</button>
+              <button onClick={() => navigate('/portfolio')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Portfolio</button>
+              <button onClick={() => navigate('/contact')} className="text-[#2C323C] hover:text-[#BBED50] transition-colors font-medium">Contact</button>
+              <Button className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 font-semibold">
                 Get Free Quote
               </Button>
             </div>
+
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 bg-white">
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                <button onClick={() => navigate('/')} className="block px-3 py-2 text-[#2C323C] hover:text-[#BBED50] font-medium">Home</button>
+                <button onClick={() => navigate('/about')} className="block px-3 py-2 text-[#2C323C] hover:text-[#BBED50] font-medium">About</button>
+                <button onClick={() => navigate('/services')} className="block px-3 py-2 text-[#2C323C] hover:text-[#BBED50] font-medium">Services</button>
+                <button onClick={() => navigate('/portfolio')} className="block px-3 py-2 text-[#2C323C] hover:text-[#BBED50] font-medium">Portfolio</button>
+                <button onClick={() => navigate('/contact')} className="block px-3 py-2 text-[#2C323C] hover:text-[#BBED50] font-medium">Contact</button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -62,12 +93,12 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200">
+                <Badge className="bg-[#BBED50]/20 text-[#2C323C] hover:bg-[#BBED50]/30 border-[#BBED50]">
                   🚀 #1 Web Development Company in USA
                 </Badge>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] leading-tight">
                   Transform Your Business with 
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Custom Web Solutions</span>
+                  <span className="bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 bg-clip-text text-transparent"> Custom Web Solutions</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   From stunning websites to powerful web applications, we deliver cutting-edge solutions that drive growth and exceed expectations. Trusted by 500+ businesses across the USA.
@@ -77,7 +108,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6"
+                  className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 text-lg px-8 py-6 font-semibold"
                   onClick={() => scrollToSection('contact')}
                 >
                   Start Your Project Today
@@ -85,7 +116,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="text-lg px-8 py-6 border-2 hover:bg-gray-50"
+                  className="text-lg px-8 py-6 border-2 border-[#2C323C] text-[#2C323C] hover:bg-[#2C323C] hover:text-white"
                   onClick={() => scrollToSection('portfolio')}
                 >
                   View Our Work
@@ -94,22 +125,22 @@ const Index = () => {
 
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">500+</div>
+                  <div className="text-2xl font-bold text-[#2C323C]">500+</div>
                   <div className="text-sm text-gray-600">Projects Delivered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">98%</div>
+                  <div className="text-2xl font-bold text-[#2C323C]">98%</div>
                   <div className="text-sm text-gray-600">Client Satisfaction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">24/7</div>
+                  <div className="text-2xl font-bold text-[#2C323C]">24/7</div>
                   <div className="text-sm text-gray-600">Support Available</div>
                 </div>
               </div>
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-[#2C323C] to-[#2C323C]/90 rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Get Your Free Consultation</h3>
                 <p className="mb-6">Ready to transform your digital presence? Let's discuss your project requirements.</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -134,7 +165,7 @@ const Index = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   />
-                  <Button type="submit" className="w-full bg-white text-blue-600 hover:bg-gray-100">
+                  <Button type="submit" className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 font-semibold">
                     Get Free Quote Now
                   </Button>
                 </form>
@@ -148,7 +179,7 @@ const Index = () => {
             onClick={() => scrollToSection('services')}
             className="animate-bounce bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow"
           >
-            <ChevronDown className="w-6 h-6 text-blue-600" />
+            <ChevronDown className="w-6 h-6 text-[#BBED50]" />
           </button>
         </div>
       </section>
@@ -340,18 +371,18 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-16 bg-gradient-to-r from-[#2C323C] to-[#2C323C]/90">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Join 500+ successful businesses that trust Bytecode IT Solutions for their web development needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-6"
+              className="bg-[#BBED50] text-[#2C323C] hover:bg-[#BBED50]/90 text-lg px-8 py-6 font-semibold"
               onClick={() => scrollToSection('contact')}
             >
               Get Your Free Consultation
@@ -359,7 +390,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6"
+              className="border-white text-white hover:bg-white hover:text-[#2C323C] text-lg px-8 py-6"
             >
               Call Now: (555) 123-4567
             </Button>
@@ -462,15 +493,18 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-[#2C323C] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">B</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-[#BBED50] to-[#BBED50]/80 rounded-lg flex items-center justify-center">
+                  <span className="text-[#2C323C] font-bold text-lg">B</span>
                 </div>
-                <span className="font-bold text-lg">Bytecode IT Solutions</span>
+                <div>
+                  <span className="font-bold text-lg text-white">Bytecode</span>
+                  <div className="text-xs text-gray-400">IT Solutions PVT LTD</div>
+                </div>
               </div>
               <p className="text-gray-400 mb-4">
                 Transforming businesses with cutting-edge web development solutions across the USA.
@@ -490,10 +524,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
+                <li><button onClick={() => navigate('/about')}>About Us</button></li>
                 <li>Our Team</li>
                 <li>Careers</li>
-                <li>Contact</li>
+                <li><button onClick={() => navigate('/contact')}>Contact</button></li>
               </ul>
             </div>
             
@@ -501,15 +535,15 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>(555) 123-4567</li>
-                <li>hello@bytecodeit.com</li>
+                <li>hello@bytecode.com</li>
                 <li>123 Tech Street</li>
                 <li>Silicon Valley, CA 94000</li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Bytecode IT Solutions Private Limited. All rights reserved.</p>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Bytecode IT Solutions PVT LTD. All rights reserved.</p>
           </div>
         </div>
       </footer>
