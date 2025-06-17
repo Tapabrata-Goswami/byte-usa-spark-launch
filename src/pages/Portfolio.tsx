@@ -2,69 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-import { ArrowUp, Menu, X, ExternalLink } from "lucide-react";
+import { ExternalLink, TrendingUp, Users, DollarSign, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Portfolio = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const projects = [
-    {
-      title: "TechStart E-Commerce Platform",
-      category: "E-Commerce",
-      description: "Increased online sales by 300% with a custom Shopify solution and advanced analytics.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-      results: ["300% Sales Increase", "Mobile-First Design", "Payment Integration"],
-      technologies: ["React", "Node.js", "Shopify", "Stripe"],
-      timeline: "3 months"
-    },
-    {
-      title: "FinanceFlow Web Application",
-      category: "SaaS Platform",
-      description: "Built a secure financial management platform serving 10,000+ users nationwide.",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80",
-      results: ["10K+ Active Users", "Bank-Grade Security", "Real-time Analytics"],
-      technologies: ["Vue.js", "Python", "PostgreSQL", "AWS"],
-      timeline: "6 months"
-    },
-    {
-      title: "HealthCare Provider Portal",
-      category: "Healthcare",
-      description: "Streamlined patient management with HIPAA-compliant web portal and appointment system.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-      results: ["HIPAA Compliant", "Patient Portal", "Appointment System"],
-      technologies: ["Angular", "C#", "SQL Server", "Azure"],
-      timeline: "4 months"
-    },
-    {
-      title: "Restaurant Chain Management",
-      category: "Food & Beverage",
-      description: "Unified ordering system across 50+ locations with real-time inventory tracking.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
-      results: ["50+ Locations", "Real-time Sync", "Order Management"],
-      technologies: ["React Native", "Firebase", "Express.js", "MongoDB"],
-      timeline: "5 months"
-    },
-    {
-      title: "Educational Learning Platform",
-      category: "Education",
-      description: "Interactive learning platform with video streaming and progress tracking for 5,000+ students.",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80",
-      results: ["5K+ Students", "Video Streaming", "Progress Tracking"],
-      technologies: ["Next.js", "Prisma", "Vercel", "Stripe"],
-      timeline: "4 months"
-    },
-    {
-      title: "Real Estate CRM System",
-      category: "Real Estate",
-      description: "Comprehensive CRM solution managing 1,000+ properties with automated lead generation.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
-      results: ["1K+ Properties", "Lead Generation", "CRM Integration"],
-      technologies: ["Laravel", "MySQL", "Docker", "Redis"],
-      timeline: "3 months"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -74,9 +17,9 @@ const Portfolio = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigate('/')}>
               <img 
-                src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                src="/lovable-uploads/cec5ab2c-8de4-423e-85ca-10b71cdee0b5.png" 
                 alt="Bytecode IT Solutions"
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <div>
                 <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
@@ -124,15 +67,14 @@ const Portfolio = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className="bg-[#BBED50]/20 text-[#2C323C] hover:bg-[#BBED50]/30 border-[#BBED50] mb-4">
-            Our Work
+            Success Stories
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] mb-6">
-            Success Stories & 
-            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Project Showcase</span>
+            Proven Results That 
+            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Speak Volumes</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our portfolio of successful projects and see how we've helped businesses 
-            across various industries achieve their digital transformation goals.
+            See how we've transformed businesses from struggling to thriving. These aren't just websites - they're profit-generating machines.
           </p>
         </div>
       </section>
@@ -140,48 +82,101 @@ const Portfolio = () => {
       {/* Portfolio Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-                <div className="relative h-48 bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${project.image})` }}>
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D]">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Project
-                    </Button>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {[
+              {
+                title: "TechStart E-Commerce Empire",
+                category: "E-Commerce Transformation",
+                description: "From zero to $100K/month in just 8 months. Complete brand overhaul and conversion-optimized store design.",
+                image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+                results: [
+                  { label: "Monthly Revenue", value: "$100K+", icon: <DollarSign className="w-5 h-5" /> },
+                  { label: "Conversion Rate", value: "+450%", icon: <TrendingUp className="w-5 h-5" /> },
+                  { label: "Customer Base", value: "5,000+", icon: <Users className="w-5 h-5" /> }
+                ],
+                testimonial: "Best investment we ever made. ROI was incredible!",
+                client: "Sarah Johnson, CEO",
+                timeframe: "Delivered in 6 weeks"
+              },
+              {
+                title: "FinanceFlow SaaS Platform",
+                category: "SaaS Development",
+                description: "Built a secure financial platform serving 10,000+ users with bank-grade security and real-time analytics.",
+                image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80",
+                results: [
+                  { label: "Active Users", value: "10K+", icon: <Users className="w-5 h-5" /> },
+                  { label: "Security Rating", value: "A+", icon: <TrendingUp className="w-5 h-5" /> },
+                  { label: "Uptime", value: "99.9%", icon: <DollarSign className="w-5 h-5" /> }
+                ],
+                testimonial: "They turned our vision into a money-making reality.",
+                client: "Michael Chen, Founder",
+                timeframe: "Delivered in 12 weeks"
+              },
+              {
+                title: "HealthCare Provider Revolution",
+                category: "Healthcare Portal",
+                description: "HIPAA-compliant patient management system that streamlined operations and improved patient satisfaction by 200%.",
+                image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+                results: [
+                  { label: "Patient Satisfaction", value: "+200%", icon: <TrendingUp className="w-5 h-5" /> },
+                  { label: "Operational Efficiency", value: "+75%", icon: <DollarSign className="w-5 h-5" /> },
+                  { label: "Compliance Score", value: "100%", icon: <Users className="w-5 h-5" /> }
+                ],
+                testimonial: "Transformed how we serve our patients completely.",
+                client: "Dr. Emily Rodriguez",
+                timeframe: "Delivered in 10 weeks"
+              },
+              {
+                title: "RetailPlus E-Commerce Makeover",
+                category: "Retail Transformation",
+                description: "Complete redesign and optimization resulted in 250% sales increase and 40% improvement in customer retention.",
+                image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+                results: [
+                  { label: "Sales Increase", value: "+250%", icon: <DollarSign className="w-5 h-5" /> },
+                  { label: "Customer Retention", value: "+40%", icon: <Users className="w-5 h-5" /> },
+                  { label: "Page Speed", value: "95/100", icon: <TrendingUp className="w-5 h-5" /> }
+                ],
+                testimonial: "Our customers love the new experience. Sales are booming!",
+                client: "James Wilson, Owner",
+                timeframe: "Delivered in 8 weeks"
+              }
+            ].map((project, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <div className="h-64 bg-cover bg-center relative overflow-hidden" style={{ backgroundImage: `url(${project.image})` }}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C323C]/80 to-transparent"></div>
+                  <Badge className="absolute top-4 left-4 bg-[#BBED50] text-[#2C323C]">{project.category}</Badge>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="text-sm opacity-90">{project.timeframe}</div>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge className="bg-[#BBED50]/20 text-[#2C323C] border-[#BBED50]">{project.category}</Badge>
-                    <span className="text-sm text-gray-500">{project.timeline}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-[#2C323C] mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-[#2C323C] mb-3">{project.title}</h3>
+                  <p className="text-gray-600 mb-6">{project.description}</p>
                   
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="font-semibold text-[#2C323C] mb-2">Key Results:</h4>
-                      <div className="space-y-2">
-                        {project.results.map((result, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-gray-700">
-                            <ArrowUp className="w-4 h-4 text-[#BBED50] mr-2" />
-                            {result}
-                          </div>
-                        ))}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {project.results.map((result, idx) => (
+                      <div key={idx} className="text-center">
+                        <div className="flex justify-center mb-2 text-[#BBED50]">
+                          {result.icon}
+                        </div>
+                        <div className="text-xl font-bold text-[#2C323C]">{result.value}</div>
+                        <div className="text-xs text-gray-600">{result.label}</div>
                       </div>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-[#2C323C] mb-2">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, idx) => (
-                          <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                    ))}
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                    <p className="text-gray-700 italic mb-2">"{project.testimonial}"</p>
+                    <div className="text-sm font-semibold text-[#2C323C]">- {project.client}</div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <Button className="flex-1 bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D]">
+                      View Case Study
+                    </Button>
+                    <Button variant="outline" size="icon" className="border-[#2C323C] text-[#2C323C] hover:bg-[#2C323C] hover:text-white">
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

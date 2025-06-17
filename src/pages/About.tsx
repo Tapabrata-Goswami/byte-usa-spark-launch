@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,9 +18,9 @@ const About = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigate('/')}>
               <img 
-                src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                src="/lovable-uploads/cec5ab2c-8de4-423e-85ca-10b71cdee0b5.png" 
                 alt="Bytecode IT Solutions"
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <div>
                 <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
@@ -70,12 +71,11 @@ const About = () => {
             About Our Company
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] mb-6">
-            Empowering Businesses Through 
-            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Technology</span>
+            The Team Behind 
+            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Your Success</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Since our inception, Bytecode IT Solutions has been at the forefront of digital transformation, 
-            helping businesses across the USA leverage technology to achieve unprecedented growth.
+            We're not just developers - we're business growth experts who happen to code. Every project we touch becomes a profit-generating machine.
           </p>
         </div>
       </section>
@@ -226,7 +226,7 @@ const About = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                  src="/lovable-uploads/cec5ab2c-8de4-423e-85ca-10b71cdee0b5.png" 
                   alt="Bytecode IT Solutions"
                   className="w-10 h-10 object-contain"
                 />

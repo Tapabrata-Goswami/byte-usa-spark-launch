@@ -2,84 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-import { 
-  LayoutDashboard, 
-  LayoutGrid, 
-  Search, 
-  LayoutList, 
-  Link, 
-  Youtube, 
-  Menu, 
-  X,
-  Code,
-  Smartphone,
-  Database,
-  Shield
-} from "lucide-react";
+import { Code, ShoppingCart, Search, Palette, Shield, Cloud, Menu, X, CheckCircle, Star } from "lucide-react";
 import { useState } from "react";
 
 const Services = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const services = [
-    {
-      icon: <LayoutDashboard className="w-8 h-8" />,
-      title: "Custom Web Development",
-      description: "Bespoke web applications built with cutting-edge technologies like React, Node.js, and cloud platforms.",
-      features: ["React & Next.js", "Full-Stack Development", "API Integration", "Database Design"],
-      price: "Starting from $2,999"
-    },
-    {
-      icon: <LayoutGrid className="w-8 h-8" />,
-      title: "E-Commerce Solutions",
-      description: "Powerful online stores that convert visitors into customers with seamless shopping experiences.",
-      features: ["Shopify & WooCommerce", "Payment Gateway", "Inventory Management", "Mobile Optimization"],
-      price: "Starting from $3,999"
-    },
-    {
-      icon: <Search className="w-8 h-8" />,
-      title: "SEO & Digital Marketing",
-      description: "Drive organic traffic and boost your online visibility with our proven SEO strategies.",
-      features: ["Technical SEO", "Content Strategy", "Local SEO", "Analytics Setup"],
-      price: "Starting from $999/month"
-    },
-    {
-      icon: <LayoutList className="w-8 h-8" />,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that engage users and drive conversions across all devices.",
-      features: ["User Research", "Wireframing", "Prototyping", "Responsive Design"],
-      price: "Starting from $1,999"
-    },
-    {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
-      features: ["iOS & Android", "React Native", "App Store Optimization", "Push Notifications"],
-      price: "Starting from $4,999"
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Database Solutions",
-      description: "Robust database architecture and management for scalable business applications.",
-      features: ["MySQL & PostgreSQL", "Database Migration", "Performance Optimization", "Backup Solutions"],
-      price: "Starting from $1,499"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Cybersecurity Services",
-      description: "Protect your digital assets with comprehensive security audits and implementations.",
-      features: ["Security Audits", "SSL Certificates", "Firewall Setup", "Regular Monitoring"],
-      price: "Starting from $799/month"
-    },
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "Legacy System Modernization",
-      description: "Transform outdated systems into modern, efficient, and scalable solutions.",
-      features: ["Code Refactoring", "Technology Migration", "API Modernization", "Performance Enhancement"],
-      price: "Starting from $5,999"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -89,9 +17,9 @@ const Services = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigate('/')}>
               <img 
-                src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                src="/lovable-uploads/cec5ab2c-8de4-423e-85ca-10b71cdee0b5.png" 
                 alt="Bytecode IT Solutions"
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <div>
                 <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
@@ -139,15 +67,14 @@ const Services = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className="bg-[#BBED50]/20 text-[#2C323C] hover:bg-[#BBED50]/30 border-[#BBED50] mb-4">
-            Our Services
+            Premium Services
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] mb-6">
-            Comprehensive 
-            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Digital Solutions</span>
+            Services That 
+            <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Generate Revenue</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From web development to digital marketing, we offer a full suite of services to help 
-            your business thrive in the digital landscape.
+            Stop throwing money at marketing that doesn't work. Our proven services turn your investment into profit, guaranteed.
           </p>
         </div>
       </section>
@@ -155,32 +82,121 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg group">
-                <CardContent className="p-6">
-                  <div className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] rounded-lg p-3 w-fit mb-4 text-[#2C323C] group-hover:scale-110 transition-transform">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {[
+              {
+                icon: <Code className="w-12 h-12" />,
+                title: "Revenue-Driven Web Development",
+                description: "Custom websites engineered for conversions, not just looks. Every element is designed to turn visitors into paying customers.",
+                features: [
+                  "Conversion-optimized design",
+                  "Lightning-fast loading speeds",
+                  "Mobile-first responsive design",
+                  "SEO-ready architecture",
+                  "Advanced analytics integration"
+                ],
+                pricing: "Starting at $2,999",
+                guarantee: "300% ROI guarantee or money back"
+              },
+              {
+                icon: <ShoppingCart className="w-12 h-12" />,
+                title: "High-Converting E-Commerce Stores",
+                description: "Transform your products into profit machines. Our e-commerce solutions sell while you sleep, 24/7.",
+                features: [
+                  "Shopify & WooCommerce mastery",
+                  "Payment gateway optimization",
+                  "Abandoned cart recovery",
+                  "Inventory management systems",
+                  "Sales funnel automation"
+                ],
+                pricing: "Starting at $4,999",
+                guarantee: "Break-even in 90 days or we work for free"
+              },
+              {
+                icon: <Search className="w-12 h-12" />,
+                title: "SEO Domination & Traffic Explosion",
+                description: "Steal customers from competitors by ranking #1 on Google. Our SEO strategies generate traffic that converts.",
+                features: [
+                  "Guaranteed Google rankings",
+                  "Local SEO domination",
+                  "Content strategy that sells",
+                  "Technical SEO optimization",
+                  "Competitor analysis & targeting"
+                ],
+                pricing: "Starting at $1,999/month",
+                guarantee: "Top 3 Google rankings in 6 months"
+              },
+              {
+                icon: <Palette className="w-12 h-12" />,
+                title: "Brand Design That Builds Trust",
+                description: "Professional branding that makes customers choose you over competitors. First impressions convert into sales.",
+                features: [
+                  "Complete brand identity",
+                  "Logo & visual assets",
+                  "Brand guidelines & strategy",
+                  "Marketing collateral design",
+                  "Social media branding"
+                ],
+                pricing: "Starting at $1,999",
+                guarantee: "100% satisfaction or complete redesign"
+              },
+              {
+                icon: <Shield className="w-12 h-12" />,
+                title: "24/7 Website Protection & Maintenance",
+                description: "Sleep peacefully knowing your website is secure, fast, and always online. We handle everything so you don't have to.",
+                features: [
+                  "Real-time security monitoring",
+                  "Daily automated backups",
+                  "Performance optimization",
+                  "Software updates & patches",
+                  "Priority technical support"
+                ],
+                pricing: "Starting at $299/month",
+                guarantee: "99.9% uptime guarantee"
+              },
+              {
+                icon: <Cloud className="w-12 h-12" />,
+                title: "Complete Digital Transformation",
+                description: "Future-proof your business with cloud solutions and automation that save time, reduce costs, and increase efficiency.",
+                features: [
+                  "Cloud migration & setup",
+                  "Business process automation",
+                  "System integration & APIs",
+                  "Data analytics & reporting",
+                  "Scalable infrastructure"
+                ],
+                pricing: "Custom enterprise pricing",
+                guarantee: "50% efficiency improvement or refund"
+              }
+            ].map((service, index) => (
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] rounded-lg p-4 w-fit mb-6 text-[#2C323C]">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-[#2C323C] mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#BBED50] rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="border-t pt-4">
-                    <div className="text-lg font-bold text-[#2C323C] mb-3">{service.price}</div>
-                    <Button 
-                      className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] font-semibold"
-                      onClick={() => navigate('/contact')}
-                    >
-                      Get Started
-                    </Button>
+                  <h3 className="text-2xl font-bold text-[#2C323C] mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-[#2C323C] mb-3">What's Included:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 text-[#BBED50] mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
+
+                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                    <div className="text-2xl font-bold text-[#BBED50] mb-2">{service.pricing}</div>
+                    <div className="text-sm text-gray-600 font-medium">✅ {service.guarantee}</div>
+                  </div>
+
+                  <Button className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg py-6">
+                    Get Started Today
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -271,9 +287,9 @@ const Services = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                  src="/lovable-uploads/cec5ab2c-8de4-423e-85ca-10b71cdee0b5.png" 
                   alt="Bytecode IT Solutions"
-                  className="w-10 h-10 object-contain"
+                  className="w-12 h-12 object-contain"
                 />
                 <div>
                   <span className="font-bold text-lg text-white">Bytecode</span>

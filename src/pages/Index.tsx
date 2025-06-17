@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowDown, ArrowUp, ChevronDown, Search, LayoutDashboard, LayoutGrid, LayoutList, Link, Youtube, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUp, ChevronDown, Search, LayoutDashboard, LayoutGrid, LayoutList, Link, Youtube, Menu, X, CheckCircle, Star } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
@@ -43,9 +42,9 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/1e6b1fce-6b9e-4994-9c8e-d6ad642a53f5.png" 
+                src="/lovable-uploads/cec5ab2c-8de4-423e-85ca-10b71cdee0b5.png" 
                 alt="Bytecode IT Solutions"
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <div>
                 <span className="font-bold text-xl text-[#2C323C]">Bytecode</span>
@@ -100,20 +99,30 @@ const Index = () => {
                 </Badge>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2C323C] leading-tight">
                   Transform Your Business with 
-                  <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Custom Web Solutions</span>
+                  <span className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] bg-clip-text text-transparent"> Professional Web Solutions</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  From stunning websites to powerful web applications, we deliver cutting-edge solutions that drive growth and exceed expectations. Trusted by 500+ businesses across the USA.
+                  Ready to dominate your market? We build stunning, high-converting websites that turn visitors into customers. Join 500+ successful businesses who chose Bytecode for results that matter.
                 </p>
               </div>
               
+              {/* Trust Indicators */}
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-600">4.9/5 from 200+ reviews</span>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold"
+                  className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold animate-pulse"
                   onClick={() => scrollToSection('contact')}
                 >
-                  Start Your Project Today
+                  🔥 Start Your Success Story Today
                 </Button>
                 <Button 
                   variant="outline" 
@@ -121,14 +130,14 @@ const Index = () => {
                   className="text-lg px-8 py-6 border-2 border-[#2C323C] text-[#2C323C] hover:bg-[#2C323C] hover:text-white"
                   onClick={() => scrollToSection('portfolio')}
                 >
-                  View Our Work
+                  See Winning Results
                 </Button>
               </div>
 
-              <div className="flex items-center space-x-8 pt-4">
+              <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#2C323C]">500+</div>
-                  <div className="text-sm text-gray-600">Projects Delivered</div>
+                  <div className="text-sm text-gray-600">Success Stories</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#2C323C]">98%</div>
@@ -136,15 +145,28 @@ const Index = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#2C323C]">24/7</div>
-                  <div className="text-sm text-gray-600">Support Available</div>
+                  <div className="text-sm text-gray-600">Premium Support</div>
                 </div>
+              </div>
+
+              {/* Urgency & Social Proof */}
+              <div className="bg-[#BBED50]/10 border border-[#BBED50] rounded-lg p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <CheckCircle className="w-5 h-5 text-[#BBED50]" />
+                  <span className="font-semibold text-[#2C323C]">Limited Time Offer</span>
+                </div>
+                <p className="text-sm text-gray-700">Book your free consultation this week and get 20% off your first project!</p>
               </div>
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-r from-[#2C323C] to-[#1F252D] rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Get Your Free Consultation</h3>
-                <p className="mb-6">Ready to transform your digital presence? Let's discuss your project requirements.</p>
+              <div className="bg-gradient-to-r from-[#2C323C] to-[#1F252D] rounded-2xl p-8 text-white shadow-2xl">
+                <div className="flex items-center space-x-2 mb-4">
+                  <div className="w-3 h-3 bg-[#BBED50] rounded-full animate-pulse"></div>
+                  <span className="text-sm text-[#BBED50]">🔥 High Demand - Book Now!</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Get Your FREE Strategy Session</h3>
+                <p className="mb-6">Ready to 10X your online presence? Let's create a winning strategy for your business.</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <Input 
                     placeholder="Your Name" 
@@ -167,10 +189,11 @@ const Index = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   />
-                  <Button type="submit" className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] font-semibold">
-                    Get Free Quote Now
+                  <Button type="submit" className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] font-semibold py-6 text-lg">
+                    🚀 Get My FREE Quote ($500 Value)
                   </Button>
                 </form>
+                <p className="text-xs text-gray-300 mt-3 text-center">No spam. Your information is 100% secure.</p>
               </div>
             </div>
           </div>
@@ -191,10 +214,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#2C323C] mb-4">
-              Our Expert Services
+              Services That Drive Real Results
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From concept to deployment, we provide end-to-end web development solutions tailored to your business needs.
+              Stop losing customers to competitors. Our proven solutions turn your website into a profit-generating machine.
             </p>
           </div>
 
@@ -202,56 +225,68 @@ const Index = () => {
             {[
               {
                 icon: <LayoutDashboard className="w-8 h-8" />,
-                title: "Custom Web Development",
-                description: "Bespoke web applications built with cutting-edge technologies like React, Node.js, and cloud platforms.",
-                features: ["React & Next.js", "Full-Stack Development", "API Integration", "Database Design"]
+                title: "High-Converting Websites",
+                description: "Custom websites that convert 3X better than industry average. Built for speed, SEO, and sales.",
+                features: ["Mobile-First Design", "Lightning Fast Loading", "SEO Optimized", "Conversion Focused"],
+                price: "From $2,999"
               },
               {
                 icon: <LayoutGrid className="w-8 h-8" />,
-                title: "E-Commerce Solutions",
-                description: "Powerful online stores that convert visitors into customers with seamless shopping experiences.",
-                features: ["Shopify & WooCommerce", "Payment Gateway", "Inventory Management", "Mobile Optimization"]
+                title: "E-Commerce Powerhouses",
+                description: "Turn your products into profit with stores that sell 24/7. Complete payment integration included.",
+                features: ["Shopify & WooCommerce", "Payment Gateway Setup", "Inventory Management", "Sales Analytics"],
+                price: "From $4,999"
               },
               {
                 icon: <Search className="w-8 h-8" />,
-                title: "SEO & Digital Marketing",
-                description: "Drive organic traffic and boost your online visibility with our proven SEO strategies.",
-                features: ["Technical SEO", "Content Strategy", "Local SEO", "Analytics Setup"]
+                title: "SEO Domination",
+                description: "Rank #1 on Google and steal customers from competitors. Guaranteed traffic increase or money back.",
+                features: ["Google Ranking", "Local SEO", "Content Strategy", "Monthly Reports"],
+                price: "From $1,999/mo"
               },
               {
                 icon: <LayoutList className="w-8 h-8" />,
-                title: "UI/UX Design",
-                description: "Beautiful, intuitive designs that engage users and drive conversions across all devices.",
-                features: ["User Research", "Wireframing", "Prototyping", "Responsive Design"]
+                title: "Brand & Design That Sells",
+                description: "Professional designs that build trust and drive sales. Your brand will stand out from the crowd.",
+                features: ["Logo & Branding", "UI/UX Design", "Brand Guidelines", "Marketing Materials"],
+                price: "From $1,999"
               },
               {
                 icon: <Link className="w-8 h-8" />,
-                title: "Website Maintenance",
-                description: "Keep your website secure, fast, and up-to-date with our comprehensive maintenance services.",
-                features: ["Security Updates", "Performance Optimization", "Backup Solutions", "24/7 Monitoring"]
+                title: "24/7 Peace of Mind",
+                description: "Never worry about downtime again. Complete maintenance, security, and support included.",
+                features: ["Security Monitoring", "Daily Backups", "Performance Optimization", "Priority Support"],
+                price: "From $299/mo"
               },
               {
                 icon: <Youtube className="w-8 h-8" />,
-                title: "Digital Transformation",
-                description: "Modernize your business processes with cloud solutions and digital automation.",
-                features: ["Cloud Migration", "API Development", "System Integration", "Workflow Automation"]
+                title: "Complete Digital Transformation",
+                description: "Future-proof your business with cloud solutions and automation that save time and money.",
+                features: ["Cloud Migration", "API Integration", "Workflow Automation", "System Optimization"],
+                price: "Custom Quote"
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
                 <CardContent className="p-6">
                   <div className="bg-gradient-to-r from-[#BBED50] to-[#A4DC3D] rounded-lg p-3 w-fit mb-4 text-[#2C323C]">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-[#2C323C] mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#BBED50] rounded-full mr-3"></div>
+                        <CheckCircle className="w-4 h-4 text-[#BBED50] mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
+                  <div className="border-t pt-4">
+                    <div className="text-lg font-bold text-[#BBED50] mb-2">{service.price}</div>
+                    <Button className="w-full bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D]">
+                      Get Started Now
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -321,10 +356,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#2C323C] mb-4">
-              What Our Clients Say
+              Real Results From Real Businesses
             </h2>
             <p className="text-xl text-gray-600">
-              Don't just take our word for it - hear from businesses we've helped succeed.
+              See how we've helped businesses like yours achieve incredible growth and success.
             </p>
           </div>
 
@@ -333,31 +368,37 @@ const Index = () => {
               {
                 name: "Sarah Johnson",
                 title: "CEO, TechStart Inc.",
-                content: "Bytecode IT Solutions transformed our online presence. Their team delivered a beautiful, high-performing website that exceeded our expectations. Our conversion rates have tripled!",
+                content: "ROI of 400% in just 6 months! Bytecode didn't just build us a website - they built us a money-making machine. Sales have tripled and we're booked solid!",
                 rating: 5,
-                location: "San Francisco, CA"
+                location: "San Francisco, CA",
+                result: "+400% ROI"
               },
               {
                 name: "Michael Chen",
                 title: "Founder, GrowthLab",
-                content: "Professional, reliable, and incredibly skilled. They built our SaaS platform from scratch and continue to provide excellent support. Highly recommended!",
+                content: "From zero to $100K/month in online sales! Their team is incredible - professional, fast, and they actually care about your success. Best investment we ever made!",
                 rating: 5,
-                location: "New York, NY"
+                location: "New York, NY",
+                result: "$100K/mo Sales"
               },
               {
                 name: "Emily Rodriguez",
                 title: "Marketing Director, RetailPlus",
-                content: "The e-commerce solution they developed has been a game-changer for our business. Sales have increased by 250% since launch. Amazing work!",
+                content: "We were skeptical but they delivered beyond our wildest dreams. 250% increase in sales, customers love the new site, and our conversion rate is through the roof!",
                 rating: 5,
-                location: "Austin, TX"
+                location: "Austin, TX",
+                result: "+250% Sales"
               }
             ].map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <div key={i} className="w-5 h-5 text-yellow-400">⭐</div>
-                    ))}
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <Badge className="bg-[#BBED50]/20 text-[#BBED50] font-bold">{testimonial.result}</Badge>
                   </div>
                   <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
                   <div>
@@ -376,27 +417,31 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-r from-[#2C323C] to-[#1F252D]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+            Stop Losing Money to Bad Websites
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join 500+ successful businesses that trust Bytecode IT Solutions for their web development needs.
+            Every day you wait is money lost to competitors. Join 500+ businesses making serious profit with Bytecode.
           </p>
+          <div className="bg-[#BBED50]/20 border border-[#BBED50] rounded-lg p-4 mb-8">
+            <p className="text-white font-semibold">⚡ LIMITED TIME: Book this week and save $2,000 + get FREE premium support for 3 months!</p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold"
+              className="bg-[#BBED50] text-[#2C323C] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold animate-pulse"
               onClick={() => scrollToSection('contact')}
             >
-              Get Your Free Consultation
+              🔥 Claim Your $2,000 Discount Now
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="border-white text-white hover:bg-white hover:text-[#2C323C] text-lg px-8 py-6"
             >
-              Call Now: (555) 123-4567
+              📞 Call Now: (555) 123-4567
             </Button>
           </div>
+          <p className="text-sm text-gray-400 mt-4">⏰ Offer expires in 48 hours. Don't miss out!</p>
         </div>
       </section>
 
