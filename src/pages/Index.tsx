@@ -41,11 +41,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-24">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
-                alt="BYTE - Block by Block"
-                className="object-contain"
-              />
+              <div className="text-white">
+                <span className="font-bold text-2xl">BYTE</span>
+                <div className="text-sm text-[#B3E547]">Block by Block</div>
+              </div>
             </div>
             
             {/* Desktop Navigation */}
@@ -440,11 +439,10 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-[#1a1a1a] mb-6 flex items-center">
-                <img 
-                  src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
-                  alt="BYTE - Block by Block"
-                  className="object-contain mr-3"
-                />
+                <div className="text-[#1a1a1a] mr-3">
+                  <span className="font-bold text-2xl">BYTE</span>
+                  <div className="text-sm">Block by Block</div>
+                </div>
                 Get Started Today
               </h2>
               <p className="text-lg text-[#1a1a1a] mb-8">
@@ -541,11 +539,10 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
-                  alt="BYTE - Block by Block"
-                  className="object-contain"
-                />
+                <div className="text-white">
+                  <span className="font-bold text-xl">BYTE</span>
+                  <div className="text-sm text-[#B3E547]">Block by Block</div>
+                </div>
               </div>
               <p className="text-gray-400 mb-4">
                 Transforming businesses with cutting-edge web development solutions across USA & Canada.
