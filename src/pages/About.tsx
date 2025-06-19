@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +19,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
                 alt="BYTE - Block by Block"
-                className="w-64 h-20 object-contain"
+                className="object-contain"
               />
             </div>
             
@@ -224,7 +223,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
                   alt="BYTE - Block by Block"
-                  className="w-52 h-20 object-contain"
+                  className="object-contain"
                 />
               </div>
               <p className="text-gray-400 mb-4">
