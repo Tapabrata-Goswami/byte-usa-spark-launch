@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,12 +15,12 @@ const About = () => {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-[#1a1a1a]/95 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-24">
             <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
               <img 
-                src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
                 alt="BYTE - Block by Block"
-                className="w-48 h-16 object-contain"
+                className="w-64 h-20 object-contain"
               />
             </div>
             
@@ -221,9 +222,9 @@ const About = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                  src="/lovable-uploads/f6c89e18-8c91-4088-b362-a80dab40cb83.png" 
                   alt="BYTE - Block by Block"
-                  className="w-40 h-16 object-contain"
+                  className="w-52 h-20 object-contain"
                 />
               </div>
               <p className="text-gray-400 mb-4">
