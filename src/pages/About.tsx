@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,14 +12,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-[#3B4954]/95 backdrop-blur-md border-b border-gray-800 z-50">
+      <nav className="fixed top-0 w-full bg-[#1a1a1a]/95 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
               <img 
-                src="/lovable-uploads/65659502-a2b2-46ed-886c-69bbeb2b0fc6.png" 
-                alt="ByteCode - Block by Block"
-                className="w-32 h-12 object-contain"
+                src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                alt="BYTE - Block by Block"
+                className="w-48 h-16 object-contain"
               />
             </div>
             
@@ -31,7 +30,7 @@ const About = () => {
               <button onClick={() => navigate('/services')} className="text-white hover:text-[#B3E547] transition-colors font-medium">Services</button>
               <button onClick={() => navigate('/portfolio')} className="text-white hover:text-[#B3E547] transition-colors font-medium">Portfolio</button>
               <button onClick={() => navigate('/contact')} className="text-white hover:text-[#B3E547] transition-colors font-medium">Contact</button>
-              <Button className="bg-[#B3E547] text-[#3B4954] hover:bg-[#A4DC3D] font-semibold">
+              <Button className="bg-[#B3E547] text-[#1a1a1a] hover:bg-[#A4DC3D] font-semibold">
                 Get Free Quote
               </Button>
             </div>
@@ -47,7 +46,7 @@ const About = () => {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-800 bg-[#3B4954]">
+            <div className="md:hidden border-t border-gray-800 bg-[#1a1a1a]">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <button onClick={() => navigate('/')} className="block px-3 py-2 text-white hover:text-[#B3E547] font-medium">Home</button>
                 <button onClick={() => navigate('/about')} className="block px-3 py-2 text-[#B3E547] font-medium">About</button>
@@ -61,7 +60,7 @@ const About = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className="bg-[#B3E547]/20 text-[#3B4954] hover:bg-[#B3E547]/30 border-[#B3E547] mb-4">
             About Our Company
@@ -159,7 +158,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-gradient-to-r from-[#3B4954] to-[#2C3E4A]">
+      <section className="py-16 bg-gradient-to-r from-[#1a1a1a] to-[#2C3E4A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -198,7 +197,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-[#B3E547] text-[#3B4954] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold"
+              className="bg-[#B3E547] text-[#1a1a1a] hover:bg-[#A4DC3D] text-lg px-8 py-6 font-semibold"
               onClick={() => navigate('/contact')}
             >
               Start Your Project
@@ -206,7 +205,7 @@ const About = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-[#3B4954] text-[#3B4954] hover:bg-[#3B4954] hover:text-white text-lg px-8 py-6"
+              className="border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white text-lg px-8 py-6"
               onClick={() => navigate('/services')}
             >
               View Our Services
@@ -216,15 +215,15 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3B4954] text-white py-12">
+      <footer className="bg-[#1a1a1a] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/65659502-a2b2-46ed-886c-69bbeb2b0fc6.png" 
-                  alt="ByteCode - Block by Block"
-                  className="w-32 h-12 object-contain"
+                  src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                  alt="BYTE - Block by Block"
+                  className="w-40 h-16 object-contain"
                 />
               </div>
               <p className="text-gray-400 mb-4">
@@ -264,7 +263,7 @@ const About = () => {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ByteCode - Block by Block. All rights reserved. Serving USA & Canada.</p>
+            <p>&copy; 2024 BYTE - Block by Block. All rights reserved. Serving USA & Canada.</p>
           </div>
         </div>
       </footer>

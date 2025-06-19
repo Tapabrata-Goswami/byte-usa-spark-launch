@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -38,14 +37,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-[#3B4954]/95 backdrop-blur-md border-b border-gray-800 z-50">
+      <nav className="fixed top-0 w-full bg-[#1a1a1a]/95 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/65659502-a2b2-46ed-886c-69bbeb2b0fc6.png" 
-                alt="ByteCode - Block by Block"
-                className="w-32 h-12 object-contain"
+                src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                alt="BYTE - Block by Block"
+                className="w-48 h-16 object-contain"
               />
             </div>
             
@@ -56,7 +55,7 @@ const Index = () => {
               <button onClick={() => navigate('/services')} className="text-white hover:text-[#B3E547] transition-colors font-medium">Services</button>
               <button onClick={() => navigate('/portfolio')} className="text-white hover:text-[#B3E547] transition-colors font-medium">Portfolio</button>
               <button onClick={() => navigate('/contact')} className="text-white hover:text-[#B3E547] transition-colors font-medium">Contact</button>
-              <Button className="bg-[#B3E547] text-[#3B4954] hover:bg-[#A4DC3D] font-semibold">
+              <Button className="bg-[#B3E547] text-[#1a1a1a] hover:bg-[#A4DC3D] font-semibold">
                 Get Free Quote
               </Button>
             </div>
@@ -72,7 +71,7 @@ const Index = () => {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-800 bg-[#3B4954]">
+            <div className="md:hidden border-t border-gray-800 bg-[#1a1a1a]">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <button onClick={() => navigate('/')} className="block px-3 py-2 text-white hover:text-[#B3E547] font-medium">Home</button>
                 <button onClick={() => navigate('/about')} className="block px-3 py-2 text-white hover:text-[#B3E547] font-medium">About</button>
@@ -86,7 +85,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
@@ -404,7 +403,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#3B4954] to-[#2C3E4A]">
+      <section className="py-16 bg-gradient-to-r from-[#1a1a1a] to-[#2C3E4A]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Stop Losing Money to Bad Websites
@@ -436,50 +435,50 @@ const Index = () => {
       </section>
 
       {/* Contact Section - Get Started Today */}
-      <section id="contact" className="py-16" style={{ background: `linear-gradient(135deg, #B3E547 0%, #A4DC3D 50%, #3B4954 100%)` }}>
+      <section id="contact" className="py-16" style={{ background: `linear-gradient(135deg, #B3E547 0%, #A4DC3D 50%, #1a1a1a 100%)` }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-[#3B4954] mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-[#1a1a1a] mb-6 flex items-center">
                 <img 
-                  src="/lovable-uploads/7912e96d-a98f-4145-9693-67d1b4f6bee4.png" 
-                  alt="ByteCode - Block by Block"
-                  className="w-12 h-12 object-contain mr-3"
+                  src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                  alt="BYTE - Block by Block"
+                  className="w-16 h-16 object-contain mr-3"
                 />
                 Get Started Today
               </h2>
-              <p className="text-lg text-[#3B4954] mb-8">
+              <p className="text-lg text-[#1a1a1a] mb-8">
                 Ready to dominate the USA & Canada markets? Fill out the form and our team will contact you within 24 hours with a customized solution for your business needs.
               </p>
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="bg-[#3B4954] rounded-full p-3">
+                  <div className="bg-[#1a1a1a] rounded-full p-3">
                     <span className="text-white text-sm">📞</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-[#3B4954]">Phone (USA & Canada)</div>
-                    <div className="text-[#3B4954]/80">(555) 123-4567</div>
+                    <div className="font-semibold text-[#1a1a1a]">Phone (USA & Canada)</div>
+                    <div className="text-[#1a1a1a]/80">(555) 123-4567</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="bg-[#3B4954] rounded-full p-3">
+                  <div className="bg-[#1a1a1a] rounded-full p-3">
                     <span className="text-white text-sm">✉️</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-[#3B4954]">Email</div>
-                    <div className="text-[#3B4954]/80">hello@bytecode.dev</div>
+                    <div className="font-semibold text-[#1a1a1a]">Email</div>
+                    <div className="text-[#1a1a1a]/80">hello@bytecode.dev</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="bg-[#3B4954] rounded-full p-3">
+                  <div className="bg-[#1a1a1a] rounded-full p-3">
                     <span className="text-white text-sm">📍</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-[#3B4954]">Offices</div>
-                    <div className="text-[#3B4954]/80">Silicon Valley, CA & Toronto, ON</div>
+                    <div className="font-semibold text-[#1a1a1a]">Offices</div>
+                    <div className="text-[#1a1a1a]/80">Silicon Valley, CA & Toronto, ON</div>
                   </div>
                 </div>
               </div>
@@ -487,7 +486,7 @@ const Index = () => {
             
             <Card className="border-0 shadow-xl bg-white/95 backdrop-blur-sm">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-[#3B4954] mb-6">Send Us a Message</h3>
+                <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Send Us a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <Input 
@@ -525,7 +524,7 @@ const Index = () => {
                   />
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-[#3B4954] to-[#2C3E4A] hover:from-[#2C3E4A] hover:to-[#1A2026] text-lg py-6 text-white"
+                    className="w-full bg-gradient-to-r from-[#1a1a1a] to-[#2C3E4A] hover:from-[#2C3E4A] hover:to-[#1a1a1a] text-lg py-6 text-white"
                   >
                     Send Message & Get Free Quote
                   </Button>
@@ -537,15 +536,15 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3B4954] text-white py-12">
+      <footer className="bg-[#1a1a1a] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/65659502-a2b2-46ed-886c-69bbeb2b0fc6.png" 
-                  alt="ByteCode - Block by Block"
-                  className="w-32 h-12 object-contain"
+                  src="/lovable-uploads/d99e09fb-ee26-42d4-a94f-86d1626a49cb.png" 
+                  alt="BYTE - Block by Block"
+                  className="w-40 h-16 object-contain"
                 />
               </div>
               <p className="text-gray-400 mb-4">
@@ -585,7 +584,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ByteCode - Block by Block. All rights reserved. Serving USA & Canada.</p>
+            <p>&copy; 2024 BYTE - Block by Block. All rights reserved. Serving USA & Canada.</p>
           </div>
         </div>
       </footer>
